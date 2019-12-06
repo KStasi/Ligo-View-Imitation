@@ -1,4 +1,5 @@
-mkdir build/ && cd build
+#!/bin/sh
+mkdir -p build/
 ligo compile-contract ./contracts/requester.ligo main > ./build/requester_tmp.tz 
 ligo compile-contract ./contracts/sender.ligo main > ./build/sender_tmp.tz 
 tr -d '\r' < ./build/requester_tmp.tz > ./build/requester.tz
